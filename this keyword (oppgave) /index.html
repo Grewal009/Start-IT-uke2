@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>this (keyword) oppgave</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="boxDiv" class="textDiv">
+      <p id="text">Hello</p>
+    </div>
+    <div class="btnDiv">
+      <button onclick="changeTextAndBgcolor('Hei!',this)">Hei!</button>
+      <button onclick="changeTextAndBgcolor('Hello!',this)">Hello!</button>
+      <button onclick="changeTextAndBgcolor('Hello World!',this)">
+        Hello World!
+      </button>
+      <button onclick="changeTextAndBgcolor('Hei Verden!',this)">
+        Hei Verden!
+      </button>
+    </div>
+
+    <script>
+      let p = document.getElementById("text");
+      let rdmColor;
+
+      function changeTextAndBgcolor(elmentText, btnElement) {
+        rdmColor = `${randomColor()}`;
+        p.innerText = elmentText;
+        console.log(elmentText);
+        console.log(p);
+        document.getElementById("boxDiv").style.backgroundColor = rdmColor;
+        changeButtonColor(btnElement);
+      }
+
+      function randomColor() {
+        return `rgb(${random()},${random()},${random()},0.4)`;
+      }
+      function random() {
+        let num = Math.floor(Math.random() * 225) + 1;
+        return num;
+      }
+      function changeButtonColor(element) {
+        element.style.backgroundColor = rdmColor;
+      }
+    </script>
+  </body>
+</html>

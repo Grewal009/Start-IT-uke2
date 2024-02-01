@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.textDiv {
+  width: 300px;
+  height: 200px;
+  background-color: aquamarine;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+p {
+  font-size: x-large;
+  font-weight: 900;
+}
+.btnDiv {
+  margin-top: 10px;
+}
+button {
+  padding: 3px 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: rgb(238, 169, 119);
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgb(217, 108, 31);
+}
